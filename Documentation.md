@@ -42,6 +42,7 @@ local Button = Tab:AddButton({
 
 Button:DestroyObject() --Will destroy the button.
 ```
+In the example above the button will be destroyed after its created.
 
 ## AutoRun Argument:
 The AutoRun argument is useful for automatically running the Callback function as soon as the object is created.
@@ -74,6 +75,7 @@ Tab:AddButton({
 })
 ```
 So when you press the button it will destroy itself!
+
 This is just one application of the Self Parameter. You could also do something like this:
 ```lua
 Tab:AddSlider({
