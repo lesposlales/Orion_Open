@@ -85,9 +85,9 @@ Tab:AddSlider({
 	Increment = 1,
 	ValueName = "bananas",
 	Callback = function(Value, Self)
-		if Value == 8 then
-            Self:Set(1)
-        end
+	    if Value == 8 then
+            	Self:Set(1)
+            end
 	end
 })
 ```
