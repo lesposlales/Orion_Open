@@ -35,8 +35,8 @@ Here is an example of this Function:
 ```lua
 local Button = Tab:AddButton({
 	Name = "Button!",
-	Callback = function(Self)
-      	print("Pressed")
+	Callback = function()
+      	    print("Pressed")
   	end   
 })
 
