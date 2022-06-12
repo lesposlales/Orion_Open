@@ -12,3 +12,83 @@ Removed Flags
 ```
 
 Other then the above mentioned features, everything else is replicated to the best of my ability.
+
+## Loadstring:
+
+This is the loadstring you must use for the OrionLib variable found in the original documentation:
+```lua
+local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/psGx1Bcn')))()
+```
+
+## Added Features:
+The following has been added to the new version of the library:
+
+```
+Added DestroyObject() Function for Buttons, Toggles, Sliders, Labels, Paragraphs, TextBoxes, KeyBinds, Dropdowns
+Added optional AutoRun Argument for Toggles, Sliders, Dropdowns
+Added Self Parameter for Buttons, Toggles, Sliders, TextBoxes, KeyBinds, Dropdowns
+```
+
+## DestroyObject Function:
+The DestroyObject Function is useful for destroying Buttons, Toggles, etc.
+Here is an example of this Function:
+```lua
+local Button = Tab:AddButton({
+	Name = "Button!",
+	Callback = function(Self)
+      	print("Pressed")
+  	end   
+})
+
+Button:DestroyObject() --Will destroy the button.
+```
+
+## AutoRun Argument:
+The AutoRun argument is useful for automatically running the Callback function as soon as the object is created.
+Example:
+```lua
+Tab:AddToggle({
+	Name = "This is a toggle!",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end,
+  AutoRun = true
+})
+```
+In the example above, as soon as the Toggle is created, it will run the Callback function once.
+
+## Self Parameter:
+
+The Self Parameter is useful when you want to use a Player Input's own Functions.
+For Example:
+
+Say you have a button and when it's Callback Function is ran, it will destroy itself. 
+For this situation you can use the Self Parameter like this:
+```lua
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function(Self)
+      	Self:DestroyObject()
+  	end    
+})
+```
+So when you press the button it will destroy itself!
+This is just one application of the Self Parameter. You could also do something like this:
+```lua
+Tab:AddSlider({
+	Name = "Slider",
+	Min = 0,
+	Max = 20,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "bananas",
+	Callback = function(Value, Self)
+		if Value == 8 then
+            Self:Set(1)
+        end
+	end
+})
+```
+In this example, if the value of the slider is 8 then the slider value will be set to 1.
