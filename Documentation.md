@@ -27,6 +27,7 @@ The following has been added to the new version of the library:
 Added DestroyObject() Function for Buttons, Toggles, Sliders, Labels, Paragraphs, TextBoxes, KeyBinds, Dropdowns
 Added optional AutoRun Argument for Toggles, Sliders, Dropdowns
 Added Self Parameter for Buttons, Toggles, Sliders, TextBoxes, KeyBinds, Dropdowns
+Added PostWebhook Function
 ```
 
 ## DestroyObject Function:
@@ -94,3 +95,29 @@ Tab:AddSlider({
 })
 ```
 In this example, if the value of the slider is 8 then the slider value will be set to 1.
+
+## PostWebhook Function:
+
+The PostWebhook Function is useful for sending HTTP POST Requests to Discord Webhooks.
+Here is an Example:
+```
+local Color = {Red = "16711680", Orange = "16746496", Yellow = "15728448", Green = "5887061", Blue = "2383615", Purple = "12255487"}
+
+OrionLib:PostWebhook({
+    URL = "DISCORD WEBHOOK URL",
+    Title = "My Webhook",
+    Content = "Hello!",
+    Color = Color.Red
+})
+
+--[[
+URL = <string> - The URL of your Discord Webhook.
+Title = <string> - The Title of your Webhook.
+Content = <string> - The Content of your Webhook
+Color = <number> - The Color of your Webhook (Decimal Color Value)
+]]
+```
+
+The following will send a Discord Embed message to your Webhook.
+
+The Color Table makes it easier for you to select your Color, but not required.
