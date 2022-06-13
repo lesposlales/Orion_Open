@@ -100,7 +100,7 @@ In this example, if the value of the slider is 8 then the slider value will be s
 
 The PostWebhook Function is useful for sending HTTP POST Requests to Discord Webhooks.
 Here is an Example:
-```
+```lua
 local Color = {Red = "16711680", Orange = "16746496", Yellow = "15728448", Green = "5887061", Blue = "2383615", Purple = "12255487"}
 
 OrionLib:PostWebhook({
