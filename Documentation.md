@@ -121,3 +121,5 @@ Color = <number> - The Color of your Webhook (Decimal Color Value)
 The following will send a Discord Embed message to your Webhook.
 
 The Color Table makes it easier for you to select your Color, but not required.
+
+String escaping such as the \n escape can be used for content of your Webhook.
