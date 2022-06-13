@@ -122,4 +122,4 @@ The following will send a Discord Embed message to your Webhook.
 
 The Color Table makes it easier for you to select your Color, but not required.
 
-String escaping such as the \n escape can be used for content of your Webhook.
+String escaping such as the \n (Which makes a new line for your string) escape can be used for content of your Webhook.
